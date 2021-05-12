@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PPb-eN-uXx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--마이컬리-->
+        <scene sceneID="SFh-uy-c1v">
+            <objects>
+                <viewController storyboardIdentifier="MyKurlyViewController" id="QvM-Pe-Pv0" customClass="MyKurlyViewController" customModule="Kurly_mock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eJ2-5A-ide">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HzA-Bb-Emw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oX0-fl-FGW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HzA-Bb-Emw" firstAttribute="leading" secondItem="oX0-fl-FGW" secondAttribute="leading" id="6mw-qd-auY"/>
+                            <constraint firstItem="HzA-Bb-Emw" firstAttribute="top" secondItem="oX0-fl-FGW" secondAttribute="top" id="7tX-Vi-ysN"/>
+                            <constraint firstItem="oX0-fl-FGW" firstAttribute="trailing" secondItem="HzA-Bb-Emw" secondAttribute="trailing" id="Xc9-Cu-znW"/>
+                            <constraint firstItem="oX0-fl-FGW" firstAttribute="bottom" secondItem="HzA-Bb-Emw" secondAttribute="bottom" id="kJe-Er-hBp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="마이컬리" id="aRm-lE-3qY">
+                        <rightBarButtonItems>
+                            <barButtonItem image="cart.fill" id="12c-Ri-gpq">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-5" maxY="0.0"/>
+                            </barButtonItem>
+                            <barButtonItem image="location.fill" id="9qm-hh-9N0">
+                                <inset key="imageInsets" minX="68" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <action selector="locationButtonClicked:" destination="QvM-Pe-Pv0" id="k86-db-XLH"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="HzA-Bb-Emw" id="4q1-VM-t1c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHS-fz-UcM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913.04347826086962" y="-273.21428571428572"/>
+        </scene>
+        <!--마이컬리-->
+        <scene sceneID="Kuj-lH-8FV">
+            <objects>
+                <navigationController storyboardIdentifier="MyKurlyNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="PPb-eN-uXx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="마이컬리" image="mykurly" selectedImage="mykurly.fill" id="e5f-2b-iQt"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fut-iv-0mG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QvM-Pe-Pv0" kind="relationship" relationship="rootViewController" id="RdH-w6-LCj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wa9-3X-fEe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="-273.21428571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart.fill" width="44" height="44"/>
+        <image name="location.fill" width="44" height="44"/>
+        <image name="mykurly" width="25" height="25"/>
+        <image name="mykurly.fill" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

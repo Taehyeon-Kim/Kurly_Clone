@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="ProfileBeforeLoginTVC" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileBeforeLoginTVC" rowHeight="288" id="KGk-i7-Jjw" customClass="ProfileBeforeLoginTVC" customModule="Kurly_mock" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2X-Xf-8pJ">
+                        <rect key="frame" x="8" y="30" width="304" height="41"/>
+                        <string key="text">회원 가입하고
+다양한 혜택을 받아보세요!</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfz-ks-mCF">
+                        <rect key="frame" x="20" y="81" width="280" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                        <state key="normal" title="가입 혜택 보기" image="right-arrow">
+                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2U-Zy-V8w">
+                        <rect key="frame" x="20" y="153" width="280" height="40"/>
+                        <inset key="contentEdgeInsets" minX="0.0" minY="11" maxX="0.0" maxY="11"/>
+                        <state key="normal" title="로그인/회원가입"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="f2X-Xf-8pJ" secondAttribute="trailing" constant="8" id="4yj-0j-ye2"/>
+                    <constraint firstAttribute="bottom" secondItem="H2U-Zy-V8w" secondAttribute="bottom" constant="30" id="DOf-3G-4RC"/>
+                    <constraint firstItem="H2U-Zy-V8w" firstAttribute="top" secondItem="wfz-ks-mCF" secondAttribute="bottom" constant="38" id="H2q-Np-6ZV"/>
+                    <constraint firstItem="H2U-Zy-V8w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="SyK-U4-TKd"/>
+                    <constraint firstItem="wfz-ks-mCF" firstAttribute="top" secondItem="f2X-Xf-8pJ" secondAttribute="bottom" constant="10" id="UB9-pu-98k"/>
+                    <constraint firstAttribute="trailing" secondItem="H2U-Zy-V8w" secondAttribute="trailing" constant="20" id="VoJ-b3-N6v"/>
+                    <constraint firstAttribute="trailing" secondItem="wfz-ks-mCF" secondAttribute="trailing" constant="20" id="VuW-e8-e8E"/>
+                    <constraint firstItem="wfz-ks-mCF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jxX-re-vVl"/>
+                    <constraint firstItem="f2X-Xf-8pJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="kU8-4H-aoX"/>
+                    <constraint firstItem="f2X-Xf-8pJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="szC-M0-wIY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="loginOrSignupButton" destination="H2U-Zy-V8w" id="pOQ-Xl-bBL"/>
+                <outlet property="message" destination="f2X-Xf-8pJ" id="Xgp-qM-RKA"/>
+                <outlet property="signupBenefitButton" destination="wfz-ks-mCF" id="58Q-Ol-4Zo"/>
+            </connections>
+            <point key="canvasLocation" x="-149.27536231884059" y="217.96875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="right-arrow" width="6.6666665077209473" height="12"/>
+    </resources>
+</document>

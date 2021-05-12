@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BvI-fB-tUO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--추천-->
+        <scene sceneID="4RU-ui-WPN">
+            <objects>
+                <viewController storyboardIdentifier="RecommendViewController" id="Q2S-cc-Phh" customClass="RecommendViewController" customModule="Kurly_mock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gdx-SL-sb4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECG-cq-FvQ">
+                                <rect key="frame" x="192" y="437.5" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="By7-57-ChZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ECG-cq-FvQ" firstAttribute="centerY" secondItem="Gdx-SL-sb4" secondAttribute="centerY" id="8Mi-cv-ivU"/>
+                            <constraint firstItem="ECG-cq-FvQ" firstAttribute="centerX" secondItem="Gdx-SL-sb4" secondAttribute="centerX" id="tHD-uO-7QU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="추천" id="XO3-6x-Ddf">
+                        <rightBarButtonItems>
+                            <barButtonItem image="cart.fill" id="U07-vx-CdH">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-5" maxY="0.0"/>
+                            </barButtonItem>
+                            <barButtonItem image="location.fill" id="NiZ-Rm-C74">
+                                <inset key="imageInsets" minX="68" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <action selector="locationButtonClicked:" destination="Q2S-cc-Phh" id="kw7-yW-iJm"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wm3-Op-b3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528.985507246377" y="-200.22321428571428"/>
+        </scene>
+        <!--추천-->
+        <scene sceneID="Inc-ni-F2S">
+            <objects>
+                <navigationController storyboardIdentifier="RecommendNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="BvI-fB-tUO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="추천" image="recommend" selectedImage="recommend.fill" id="Nuh-9T-U7G"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ysl-zM-zFt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q2S-cc-Phh" kind="relationship" relationship="rootViewController" id="WUB-R3-Rzc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5p-Tj-JWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618.84057971014499" y="-200.22321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart.fill" width="44" height="44"/>
+        <image name="location.fill" width="44" height="44"/>
+        <image name="recommend" width="25" height="25"/>
+        <image name="recommend.fill" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
